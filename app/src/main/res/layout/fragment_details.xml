@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:weightSum="1">
+
+	<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:id="@+id/tvName" android:textSize="36sp"
+			android:layout_alignParentTop="true"/>
+	<ImageView
+			android:layout_width="150dp"
+			app:srcCompat="@mipmap/ic_launcher"
+			android:id="@+id/ivPhoto" android:layout_height="150dp" android:layout_gravity="center_horizontal"
+			android:layout_below="@id/tvName"
+			android:layout_centerHorizontal="true"
+			android:contentDescription="@string/strNameOfProf"
+			android:layout_margin="@dimen/activity_horizontal_margin"/>
+	<ListView
+			android:layout_width="match_parent"
+			android:id="@+id/lvDegree" android:layout_height="wrap_content"
+			android:layout_below="@id/ivPhoto"/>
+	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+	          android:layout_below="@id/lvDegree"
+	          android:id="@+id/tvRating"
+	          android:layout_centerHorizontal="false" android:layout_centerVertical="false"
+	          android:textSize="18sp" android:layout_margin="@dimen/activity_vertical_margin"/>
+	<RatingBar
+			android:layout_height="wrap_content" android:id="@+id/rbRating" android:max="5"
+			style="@style/Widget.AppCompat.RatingBar" android:numStars="5" android:layout_gravity="center_horizontal"
+			android:isIndicator="false"
+			android:layout_alignParentEnd="true"
+			android:layout_alignParentRight="true"
+			android:layout_below="@id/lvDegree" android:layout_width="wrap_content"/>
+</RelativeLayout>
